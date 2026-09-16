@@ -57,25 +57,17 @@ export const siteConfig = {
       school: "Cranfield University",
       degree: "PhD in Aerospace Engineering",
       dateRange: "2018 - 2022",
-      achievements: [
-        "Awarded the first prize for the best PhD paper from Cranfield University in 2022",
-      ],
+
     },
    {
       school: "Polytechnic of Milan",
       degree: "Laurea Magistrale in Aeronautical Engineering",
-      dateRange: "2015 - 2018",
-      achievements: [
-        "Final mark: 110/110"
-      ],
+      dateRange: "2015 - 2017",
     },
    {
       school: "University of Pisa",
       degree: "Bachelor of Science in Aerospace Engineering",
-      dateRange: "2011 - 2014",
-      achievements: [
-        "Final mark: 104/110",
-      ],
+      dateRange: "2011 - 2014"
     },    
   ],
 };
