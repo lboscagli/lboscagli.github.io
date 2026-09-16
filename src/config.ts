@@ -57,17 +57,19 @@ export const siteConfig = {
       school: "Cranfield University",
       degree: "PhD in Aerospace Engineering",
       dateRange: "2018 - 2022",
-
+      achievements: [],
     },
-   {
+    {
       school: "Polytechnic of Milan",
       degree: "Laurea Magistrale in Aeronautical Engineering",
       dateRange: "2015 - 2017",
+      achievements: [],
     },
-   {
+    {
       school: "University of Pisa",
       degree: "Bachelor of Science in Aerospace Engineering",
-      dateRange: "2011 - 2014"
-    },    
+      dateRange: "2011 - 2014",
+      achievements: [],
+    },
   ],
 };
