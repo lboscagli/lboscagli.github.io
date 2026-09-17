@@ -5,19 +5,18 @@ export const siteConfig = {
   accentColor: "#1d4ed8",
   social: {
     email: "luca.boscagli@santannapisa.it",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/yourusername",
-    github: "https://github.com/yourusername",
+    linkedin: "https://www.linkedin.com/in/luca-boscagli-researcher",
+    github: "https://github.com/lboscagli",
   },
   aboutMe:
     "I am a MSCA Fellow at Sant'Anna School of Advanced Studies in Pisa. With my research I want to better quantify and minimize the impact on novel engineering solutions on the environment.",
-  skills: ["Computational Fluid Dynamics", "Python", "Fortran", "Linux"],
+  skills: ["Computational Fluid Dynamics", "Python", "Fortran", "C++", "Linux"],
   projects: [
     {
       name: "CASSANDRA - Coupled Aerosol-jet Simulation and Sensitivity Analysis with Nonlinear Data Recovery and Assimilation",
       description:
-        "CONCISE description of the project, highlighting its main objectives and outcomes",
-      link: "xxx",
+        "Condensation trails (contrails) are a significant yet poorly characterized contributors to aviation-induced radiative forcing. CASSANDRA (Coupled Aerosol-jet Simulation and Sensitivity Analysis with Non-linear Data Recovery and Assimilation) will investigate the coupled microphysical and fluid-dynamics processes controlling contrail formation under conventional and novel jet engine fuels. CASSANDRA will provide the first data assimilation framework tailored to contrail formation, and reduce model predictive uncertainty. By leveraging, 3D computational fluid dynamics, experimental and flight test data, the research will produce robust insights to improve 1D climate models. Ultimately, CASSANDRA will support evidence-based policy and aero-engine optimisation for sustainable fuels to mitigate aviation's non-CO2 climate impact.",
+      link: "https://cordis.europa.eu/project/id/101263613",
       skills: ["LES-PBE","Data assimilation","Reduced Order Modelling"],
     }
   ],
@@ -27,9 +26,6 @@ export const siteConfig = {
       title: "MSCA Fellow at Center of Interdisciplinary research on Sustainability and Climate (CISC)",
       dateRange: "Jun 2026 - Present",
       bullets: [
-        "point 1",
-        "point 2",
-        "point 3",
       ],
     },
     {
@@ -44,7 +40,7 @@ export const siteConfig = {
     {
       company: "Cranfield University",
       title: "Research Fellow in Propulsion Aerodynamics (project ODIN)",
-      dateRange: "Aug 2018 - May 2020",
+      dateRange: "May 2021 - Dec 2023",
       bullets: [
         "Designed a novel configuration to assess the aerodynamic characteristics of a compact aero-engine nacelle under off-design (engine windmilling) conditions (project: ODIN)",
         "Validated the numerical model against experimental data",
