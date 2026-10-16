@@ -1,9 +1,11 @@
 ---
 import { siteConfig } from "../config";
-import { publications } from "../data/publications";
+import { disseminationGroups } from "../data/dissemination";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasPublications = publications.length > 0;
+const hasDissemination = disseminationGroups.some(
+  (group) => group.entries.length > 0,
+);
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
@@ -35,17 +37,25 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         )
       }
       {
-        hasPublications && (
+        hasDissemination && (
           <li>
             <a
-              href="#publications"
+              href="#dissemination"
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
-              Publications
+              Dissemination
             </a>
           </li>
         )
       }
+      <li>
+        <a
+          href="#outreach"
+          class="text-gray-700 hover:text-black transition-colors font-medium"
+        >
+          Outreach
+        </a>
+      </li>
       {
         hasExperience && (
           <li>

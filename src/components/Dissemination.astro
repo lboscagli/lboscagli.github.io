@@ -1,0 +1,69 @@
+---
+import { siteConfig } from "../config";
+import { disseminationGroups } from "../data/dissemination";
+---
+
+{
+  disseminationGroups.some((group) => group.entries.length > 0) && (
+    <section id="dissemination" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Dissemination
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-10">
+              {disseminationGroups.map(
+                (group) =>
+                  group.entries.length > 0 && (
+                    <section>
+                      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
+                        {group.title}
+                      </h3>
+                      <ol class="space-y-6">
+                        {group.entries.map((entry) => (
+                          <li class="border-b border-gray-200 pb-6 last:border-b-0">
+                            <h4 class="text-lg sm:text-xl font-semibold text-gray-900">
+                              {entry.link ? (
+                                <a
+                                  href={entry.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="hover:underline"
+                                >
+                                  {entry.title}
+                                </a>
+                              ) : (
+                                entry.title
+                              )}
+                            </h4>
+                            {entry.authors.length > 0 && (
+                              <p class="mt-2 text-sm sm:text-base text-gray-600">
+                                {entry.authors.join(", ")}
+                              </p>
+                            )}
+                            <p class="mt-1 text-sm sm:text-base text-gray-600">
+                              {[entry.venue, entry.year, entry.details]
+                                .filter(Boolean)
+                                .join(" | ")}
+                            </p>
+                          </li>
+                        ))}
+                      </ol>
+                    </section>
+                  ),
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

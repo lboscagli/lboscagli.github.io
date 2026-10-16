@@ -26,11 +26,16 @@ do not overwrite or discard changes you have not reviewed.
 
 ## 2. Make your changes
 
-- **Publications:** edit `src/data/publications.bib`. Replace the sample entries
-  with your own BibTeX entries. Useful fields include `author`, `title`, `year`,
-  `journal` or `booktitle`, `volume`, `number`, `pages`, `doi`, and `url`.
-  Remove all sample entries when you are ready; the Publications section and
-  navigation link will be hidden if there are no entries.
+- **Dissemination:** edit the matching BibTeX file:
+  - `src/data/publications_journal.bib` for journal publications
+  - `src/data/publications_conference.bib` for conference publications
+  - `src/data/invited_speaker.bib` for invited talks and seminars
+  Useful fields include `author`, `title`, `year`, `journal` or `booktitle`,
+  `volume`, `number`, `pages`, `doi`, and `url`. Records are grouped by their
+  file, so add each entry to the appropriate file. The Dissemination section
+  and its navigation link are hidden if all three files have no entries.
+- **Outreach:** the Outreach section and navigation link are in place. Add your
+  activities in `src/components/Outreach.astro` when you are ready.
 - **Profile, projects, experience, and education:** edit `src/config.ts`.
 - **Layout and appearance:** edit the relevant component in `src/components/`
   or the global stylesheet at `src/styles/global.css`.
@@ -50,9 +55,9 @@ For example:
 }
 ```
 
-The site displays the title, authors, venue, year, volume/issue/pages, and a
-clickable DOI or URL when supplied. Entries are sorted with the newest year
-first.
+The Dissemination section displays the title, authors, venue, year,
+volume/issue/pages, and a clickable DOI or URL when supplied. Entries in each
+group are sorted with the newest year first.
 
 ## 3. Preview and verify locally
 
@@ -63,8 +68,9 @@ npm run dev
 ```
 
 Open the local URL printed by Astro, usually `http://localhost:4321`. Check the
-Publications navigation link and section, verify the citation text and links,
-and check any other sections you changed. Stop the server with `Ctrl+C`.
+Dissemination navigation link and its journal, conference, and invited-speaking
+groups, verify the citation text and links, and check the Outreach section and
+any other sections you changed. Stop the server with `Ctrl+C`.
 
 Run the production build before committing:
 
@@ -84,23 +90,25 @@ git status
 git diff
 ```
 
-Stage the intended files, then review the staged diff:
+For the current Dissemination and Outreach update, stage the related files
+(including removed placeholder files), then review the staged diff:
 
 ```sh
-git add src/data src/config.ts src/components src/pages package.json package-lock.json README.md RUNBOOK.md
+git add -A -- README.md RUNBOOK.md src/components/Header.astro src/components/Publications.astro src/components/Dissemination.astro src/components/Outreach.astro src/data/publications.bib src/data/publications.ts src/data/dissemination.ts src/data/invited_speaker.bib src/data/publications_conference.bib src/data/publications_journal.bib src/pages/index.astro
 git diff --cached
 ```
 
-Adjust the `git add` paths if you changed different files. Once the staged
-diff contains only the changes you intend to publish, commit them:
+Only continue if `git diff --cached` shows the changes you intend to publish.
+If you changed different files, adjust the paths in `git add` accordingly.
+Commit the changes:
 
 ```sh
-git commit -m "Update portfolio content"
+git commit -m "Add dissemination and outreach sections"
 ```
 
 ## 5. Publish to GitHub Pages
 
-Push the commit to `master`:
+Push the commit to `master`. This push starts the GitHub Pages deployment:
 
 ```sh
 git push origin master

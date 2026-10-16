@@ -38,11 +38,20 @@ The template is designed to be easily customizable through the `src/config.ts` f
 - **Experience**: Work history with bullet points
 - **Education**: Educational background and achievements
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely. Publications are read from `src/data/publications.bib`; replace the sample entries there with your BibTeX records. The Publications section and its navigation link are hidden when the bibliography has no entries.
+If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely. Dissemination records are read from the BibTeX files in `src/data/`. The Outreach section is a scaffold ready for content to be added.
 
-### Publications
+### Dissemination
 
-Edit `src/data/publications.bib` to manage the publications list. The site parses the BibTeX entries during the build and displays authors, title, venue, year, volume/issue/pages, and a DOI or URL link when available. Supported entry fields follow standard BibTeX conventions (for example, `author`, `title`, `journal` or `booktitle`, `year`, `doi`, and `url`).
+Update the relevant BibTeX file to manage each group:
+
+- `src/data/publications_journal.bib` — journal publications
+- `src/data/publications_conference.bib` — conference publications
+- `src/data/invited_speaker.bib` — invited talks and seminars
+
+The site parses these entries at build time and displays authors, title, venue,
+year, volume/issue/pages, and a DOI or URL link when available. The
+Dissemination section and navigation link are hidden if all three files have
+no entries.
 
 ### Example structures
 
@@ -138,11 +147,14 @@ devportfolio/
 │   │   ├── Footer.astro     # Site footer
 │   │   ├── Header.astro     # Navigation header
 │   │   ├── Hero.astro       # Hero/intro section
-│   │   ├── Publications.astro # Publications section
+│   │   ├── Dissemination.astro # Publications and invited talks
+│   │   ├── Outreach.astro # Outreach section
 │   │   └── Projects.astro   # Projects showcase
 │   ├── data/
-│   │   ├── publications.bib # Publications in BibTeX format
-│   │   └── publications.ts  # Parsed publication data
+│   │   ├── invited_speaker.bib # Invited talks and seminars
+│   │   ├── publications_conference.bib # Conference publications
+│   │   ├── publications_journal.bib # Journal publications
+│   │   └── dissemination.ts # Parsed BibTeX data
 │   ├── pages/
 │   │   └── index.astro      # Main page layout
 │   ├── styles/
