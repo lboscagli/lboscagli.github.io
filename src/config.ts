@@ -9,7 +9,7 @@ export const siteConfig = {
     portraitPosition: "center",
     // portraitPosition: "50% 30%",
     backgroundImage: "/images/background.jpeg",
-    backgroundImageOpacity: 0.15,
+    backgroundImageOpacity: 0.35,
     backgroundImagePosition: "center",
   },
   social: {
