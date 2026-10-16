@@ -4,10 +4,12 @@ export const siteConfig = {
   description: "Portfolio website of Luca Boscagli",
   accentColor: "#1d4ed8",
   hero: {
-    portraitImage: "/images/LucaBoscagli.jpg",
-    portraitAlt: "",
+    portraitImage: "/images/LucaBoscagli_Valdorcia.jpg",
+    portraitAlt: "A photo of Luca Boscagli enjoying a motorbike ride near his hometown (Val d'Orcia, Tuscany, Italy)",
+    portraitPosition: "50% 30%" "center",
     backgroundImage: "/images/background.jpeg",
     backgroundImageOpacity: 0.15,
+    backgroundImagePosition: "center",
   },
   social: {
     email: "luca.boscagli@santannapisa.it",

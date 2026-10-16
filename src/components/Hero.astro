@@ -7,6 +7,12 @@ import { siteConfig } from "../config";
   class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
+  <!-- Gradient overlay -->
+  <div
+    class="absolute inset-0 -z-10"
+    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+  >
+  </div>
   {
     siteConfig.hero.backgroundImage && (
       <img
@@ -14,16 +20,10 @@ import { siteConfig } from "../config";
         alt=""
         aria-hidden="true"
         class="absolute inset-0 -z-10 h-full w-full object-cover"
-        style={`opacity: ${siteConfig.hero.backgroundImageOpacity}`}
+        style={`opacity: ${siteConfig.hero.backgroundImageOpacity}; object-position: ${siteConfig.hero.backgroundImagePosition}`}
       />
     )
   }
-  <!-- Gradient overlay -->
-  <div
-    class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
-  >
-  </div>
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -167,6 +167,7 @@ import { siteConfig } from "../config";
             src={siteConfig.hero.portraitImage}
             alt={siteConfig.hero.portraitAlt || `Portrait of ${siteConfig.name}`}
             class="h-36 w-36 shrink-0 rounded-full object-cover shadow-lg ring-4 ring-white/80 sm:h-44 sm:w-44 md:h-48 md:w-48 lg:h-64 lg:w-64"
+            style={`object-position: ${siteConfig.hero.portraitPosition}`}
           />
         )
       }

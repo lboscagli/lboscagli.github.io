@@ -56,10 +56,14 @@ Add image files to `public/images/`, then set the paths in the `hero` object in
 `/images/hero-background.jpg` for `backgroundImage`. The portrait appears to the
 right of your name and title on larger screens and above them on smaller
 screens. Set `portraitAlt` to describe the portrait for screen readers.
+Use `portraitPosition` to move the crop within its circular frame. It accepts
+CSS object-position values such as `"center"`, `"50% 35%"`, or `"right top"`.
 
 The background image is disabled when `backgroundImage` is empty. Adjust
 `backgroundImageOpacity` from `0` (invisible) to `1` (fully visible); the
-default `0.15` lets the existing hero gradient and text remain prominent.
+default `0.15` lets the existing hero gradient and text remain prominent. It
+fills the full width and height of the hero; use `backgroundImagePosition` to
+choose which part of the image stays visible when it is cropped.
 
 ### Dissemination
 
