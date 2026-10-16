@@ -80,6 +80,14 @@ export const siteConfig = {
         "Provided useful guidance for the design of future novel compact aero-engine nacelles for ultra-high bypass ratio engines",
       ],
     },
+    {
+      company: "Baker Hughes, a GE Company (Nuovo Pignone, Florence, Italy)",
+      title: "Technical Intern in Turbomachinery Aerothermodynamics",
+      dateRange: "Feb 2018 - Jun 2018",
+      bullets: [
+        "Developed a numerical tool for fast assessment of the aerodynamic performance of multi-stage axial compressors",
+      ],
+    },    
   ],
   education: [
     {
