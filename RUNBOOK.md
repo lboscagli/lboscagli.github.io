@@ -34,8 +34,18 @@ do not overwrite or discard changes you have not reviewed.
   `volume`, `number`, `pages`, `doi`, and `url`. Records are grouped by their
   file, so add each entry to the appropriate file. The Dissemination section
   and its navigation link are hidden if all three files have no entries.
-- **Outreach:** the Outreach section and navigation link are in place. Add your
-  activities in `src/components/Outreach.astro` when you are ready.
+- **Outreach:** edit the two example activities in the `outreach` array in
+  `src/config.ts`:
+  - The `article` activity has an image and newspaper link. Set `link` to the
+    newspaper article URL; both the image and the article link will then open
+    the newspaper page. Update `title`, `description`, `linkText`, and
+    `imageAlt`.
+  - The `event` activity displays a date, text, and image. Update its `date`,
+    `title`, `description`, and `imageAlt`.
+  Upload your image files into `public/images/`, then set each activity's
+  `image` to its site path, such as `/images/newspaper-article.jpg`. The sample
+  placeholder images can be replaced by uploading your own files and changing
+  these paths.
 - **Profile, projects, experience, and education:** edit `src/config.ts`.
 - **Layout and appearance:** edit the relevant component in `src/components/`
   or the global stylesheet at `src/styles/global.css`.

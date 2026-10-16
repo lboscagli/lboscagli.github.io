@@ -38,7 +38,16 @@ The template is designed to be easily customizable through the `src/config.ts` f
 - **Experience**: Work history with bullet points
 - **Education**: Educational background and achievements
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely. Dissemination records are read from the BibTeX files in `src/data/`. The Outreach section is a scaffold ready for content to be added.
+If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely. Dissemination records are read from the BibTeX files in `src/data/`. Outreach activities are configured in `src/config.ts`; images go in `public/images/`.
+
+### Outreach
+
+Edit the `outreach` array in `src/config.ts`. The first example is a newspaper
+article with an image that becomes clickable when you add its `link` and a
+separate article link. The second example displays text, a date, and an image.
+Upload image files to `public/images/`, update each activity's `image` path
+(for example, `/images/my-outreach-photo.jpg`) and `imageAlt`, then replace the
+example title, description, date, and link with your content.
 
 ### Dissemination
 

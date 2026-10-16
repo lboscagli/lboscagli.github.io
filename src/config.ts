@@ -20,6 +20,25 @@ export const siteConfig = {
       skills: ["LES-PBE","Data assimilation","Reduced Order Modelling"],
     }
   ],
+  outreach: [
+    {
+      type: "article",
+      title: "Replace with newspaper article title",
+      description: "Replace with a short description of the article.",
+      link: "https://www.lanazione.it/pisa/cronaca/la-ricerca-che-merita-borsa-a8ecbad0",
+      linkText: "Read the article",
+      image: "/images/outreach-la-nazione-Mar2026.svg",
+      imageAlt: "Placeholder image for a newspaper article",
+    },
+    {
+      type: "event",
+      title: "Replace with outreach activity title",
+      date: "Add activity date",
+      description: "Replace with a description of this outreach activity.",
+      image: "/images/outreach-event-placeholder.svg",
+      imageAlt: "Placeholder image for an outreach activity",
+    },
+  ],
   experience: [
     {
       company: "Sant'Anna School of Advanced Studies",

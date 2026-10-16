@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Upload an outreach activity image</title>
+  <rect width="800" height="500" fill="#f3f4f6"/>
+  <circle cx="400" cy="190" r="78" fill="#d1d5db"/>
+  <path d="M230 395c20-95 80-145 170-145s150 50 170 145" fill="#d1d5db"/>
+  <text x="400" y="455" fill="#4b5563" font-family="monospace" font-size="24" text-anchor="middle">Replace with activity image</text>
+</svg>

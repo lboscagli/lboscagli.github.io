@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Upload a newspaper article image</title>
+  <rect width="800" height="500" fill="#f3f4f6"/>
+  <rect x="170" y="90" width="460" height="320" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="4"/>
+  <path d="M220 160h360M220 205h360M220 250h240M220 295h360M220 340h300" stroke="#9ca3af" stroke-width="14" stroke-linecap="round"/>
+  <text x="400" y="455" fill="#4b5563" font-family="monospace" font-size="24" text-anchor="middle">Replace with article image</text>
+</svg>
