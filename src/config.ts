@@ -39,6 +39,7 @@ export const siteConfig = {
       date: "25 September 2026",
       description: "La fisica (e la matematica) delle scie degli aerei",
       link: "https://www.santannapisa.it/it/terza-missione/public-engagement/bright-night-la-notte-europea-delle-ricercatrici-e-dei-ricercatori-toscana",
+      linkText: "Read the article",
       image: "/images/outreach-BRIGHT2026.jpeg",
       imageAlt: "Placeholder image for an outreach activity",
     },
