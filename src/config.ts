@@ -6,7 +6,8 @@ export const siteConfig = {
   hero: {
     portraitImage: "/images/LucaBoscagli_Valdorcia.jpg",
     portraitAlt: "A photo of Luca Boscagli enjoying a motorbike ride near his hometown (Val d'Orcia, Tuscany, Italy)",
-    portraitPosition: "50% 30%" "center",
+    portraitPosition: "center",
+    // portraitPosition: "50% 30%",
     backgroundImage: "/images/background.jpeg",
     backgroundImageOpacity: 0.15,
     backgroundImagePosition: "center",
