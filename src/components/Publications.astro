@@ -1,0 +1,57 @@
+---
+import { siteConfig } from "../config";
+import { publications } from "../data/publications";
+---
+
+{
+  publications.length > 0 && (
+    <section id="publications" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Publications
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <ol class="space-y-6">
+              {publications.map((publication) => (
+                <li class="border-b border-gray-200 pb-6 last:border-b-0">
+                  <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                    {publication.link ? (
+                      <a
+                        href={publication.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:underline"
+                      >
+                        {publication.title}
+                      </a>
+                    ) : (
+                      publication.title
+                    )}
+                  </h3>
+                  {publication.authors.length > 0 && (
+                    <p class="mt-2 text-sm sm:text-base text-gray-600">
+                      {publication.authors.join(", ")}
+                    </p>
+                  )}
+                  <p class="mt-1 text-sm sm:text-base text-gray-600">
+                    {[publication.venue, publication.year, publication.details]
+                      .filter(Boolean)
+                      .join(" | ")}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
