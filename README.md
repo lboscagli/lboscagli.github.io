@@ -49,6 +49,18 @@ Upload image files to `public/images/`, update each activity's `image` path
 (for example, `/images/my-outreach-photo.jpg`) and `imageAlt`, then replace the
 example title, description, date, and link with your content.
 
+### Hero images
+
+Add image files to `public/images/`, then set the paths in the `hero` object in
+`src/config.ts`. For example, use `/images/portrait.jpg` for `portraitImage` and
+`/images/hero-background.jpg` for `backgroundImage`. The portrait appears to the
+right of your name and title on larger screens and above them on smaller
+screens. Set `portraitAlt` to describe the portrait for screen readers.
+
+The background image is disabled when `backgroundImage` is empty. Adjust
+`backgroundImageOpacity` from `0` (invisible) to `1` (fully visible); the
+default `0.15` lets the existing hero gradient and text remain prominent.
+
 ### Dissemination
 
 Update the relevant BibTeX file to manage each group:

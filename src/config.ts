@@ -3,6 +3,12 @@ export const siteConfig = {
   title: "MSCA Fellow | Fluid Dynamics Researcher",
   description: "Portfolio website of Luca Boscagli",
   accentColor: "#1d4ed8",
+  hero: {
+    portraitImage: "/images/LucaBoscagli.jpg",
+    portraitAlt: "",
+    backgroundImage: "/images/background.jpeg",
+    backgroundImageOpacity: 0.15,
+  },
   social: {
     email: "luca.boscagli@santannapisa.it",
     linkedin: "https://www.linkedin.com/in/luca-boscagli-researcher",

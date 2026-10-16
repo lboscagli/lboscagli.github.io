@@ -7,6 +7,17 @@ import { siteConfig } from "../config";
   class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
+  {
+    siteConfig.hero.backgroundImage && (
+      <img
+        src={siteConfig.hero.backgroundImage}
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+        style={`opacity: ${siteConfig.hero.backgroundImageOpacity}`}
+      />
+    )
+  }
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 -z-10"
@@ -129,25 +140,36 @@ import { siteConfig } from "../config";
       height="100%"
       stroke-width={0}></rect>
   </svg>
-  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div>
-      <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
-      >
-        Hello! 👋
-      </h2>
-      <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
-      >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
+  <div class="relative z-10 h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
+    <div class="flex w-full flex-col-reverse items-start gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
+      <div class="max-w-4xl">
+        <h2
+          class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
         >
-      </h1>
-      <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
-      >
-        {siteConfig.title}
-      </p>
+          Hello! 👋
+        </h2>
+        <h1
+          class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
+        >
+          I'm <span style={{ color: siteConfig.accentColor }}
+            >{siteConfig.name}</span
+          >
+        </h1>
+        <p
+          class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
+        >
+          {siteConfig.title}
+        </p>
+      </div>
+      {
+        siteConfig.hero.portraitImage && (
+          <img
+            src={siteConfig.hero.portraitImage}
+            alt={siteConfig.hero.portraitAlt || `Portrait of ${siteConfig.name}`}
+            class="h-36 w-36 shrink-0 rounded-full object-cover shadow-lg ring-4 ring-white/80 sm:h-44 sm:w-44 md:h-48 md:w-48 lg:h-64 lg:w-64"
+          />
+        )
+      }
     </div>
   </div>
   <div
