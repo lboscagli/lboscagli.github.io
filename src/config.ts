@@ -9,8 +9,10 @@ export const siteConfig = {
     github: "https://github.com/lboscagli",
   },
   aboutMe:
-    "I am a MSCA Fellow at Sant'Anna School of Advanced Studies in Pisa. With my research I want to better quantify and minimize the impact on novel engineering solutions on the environment.",
-  skills: ["Computational Fluid Dynamics", "Python", "Fortran", "C++", "Linux"],
+    "I am a MSCA Fellow at Sant'Anna School of Advanced Studies in Pisa. With my research I want to better quantify and minimize the impact on novel engineering solutions on the environment. \
+    To achieve this, I use numerical methods to integrate computational fluid dynamics (CFD) and experimental data to improve predictive accuracy of computational models. \
+    My research focuses on aerospace applications, from subsonic to hypersonic regimes.",
+  skills: ["Fluid Dynamics", "High Performance Computing", "Python", "Fortran", "C++", "Linux"],
   projects: [
     {
       name: "CASSANDRA - Coupled Aerosol-jet Simulation and Sensitivity Analysis with Nonlinear Data Recovery and Assimilation",
