@@ -26,6 +26,7 @@ export const siteConfig = {
     {
       type: "article",
       title: "La ricerca che merita. Borsa Slodowska-Curie a tre progetti Sant' Anna",
+      date: "17 February 2026",
       description: "Scelti nel programma di finanziamento europeo per sostenere la carriera la carriera di ricercatrici e ricercatori in possesso di un dottorato di ricerca.",
       link: "https://www.lanazione.it/pisa/cronaca/la-ricerca-che-merita-borsa-a8ecbad0",
       linkText: "Read the article",
