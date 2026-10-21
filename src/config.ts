@@ -75,7 +75,7 @@ export const siteConfig = {
       title: "Research Fellow in Propulsion Aerodynamics (project ODIN)",
       dateRange: "May 2021 - Dec 2023",
       bullets: [
-        "Designed a novel configuration to assess the aerodynamic characteristics of a compact aero-engine nacelle under off-design (engine windmilling) conditions (project: ODIN)",
+        "Designed a novel configuration to assess the aerodynamic characteristics of a compact aero-engine nacelle under off-design (engine windmilling) conditions (project: ODIN, https://cordis.europa.eu/project/id/101007598)",
         "Validated the numerical model against experimental data",
         "Provided useful guidance for the design of future novel compact aero-engine nacelles for ultra-high bypass ratio engines",
       ],
